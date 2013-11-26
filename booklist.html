@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>Books</title>
+  <style>
+    .read {
+      background-color: tomato;
+    }
+    .toread {
+      background-color: lightblue;
+    }
+    img {
+      width: 20%;
+      height: 20%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Books</h1>
+</body>
+
+<script type="text/javascript">
+  var body = document.getElementsByTagName('body')[0];
+
+  var readList = [
+  { title: "Harry Potter and the Order of the Phoenix",
+    author: "J.K. Rowling",
+    status: true},
+  { title: "Outliers",
+    author: "Malcolm Gladwell",
+    status: true},
+  { title: "Freakonomics",
+    author: "Steven Levitt",
+    status: false}
+  ];
+
+for (var i = 0; i < readList.length; i++ ) {
+  var book_title = readList[i].title;
+  var book_author = readList[i].author;
+  var book_status = readList[i].status;
+
+  var create_li = document.createElement('li');
+  var create_ul = document.createElement('ul');
+  var create_div = document.createElement('div');
+  var create_p = document.createElement('br');
+
+  var title = document.createTextNode(book_title);
+  var author = document.createTextNode(book_author);
+
+  body.appendChild(create_ul);
+    create_ul.appendChild(title);
+    create_ul.appendChild(create_li);
+    create_li.appendChild(author);
+
+  if (book_status == true) {
+    create_li.className = "read";
+
+  } else {
+    create_li.className = "toread"
+  }
+
+};
+
+</script>
+</html>
+

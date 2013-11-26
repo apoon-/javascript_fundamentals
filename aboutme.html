@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+ <html>
+  <head>
+   <meta charset="utf-8"/>
+   <title>About Me</title>
+   
+   <style>
+      .listitem {
+        color: red;
+      }
+   </style>
+
+ </head>
+ <body>
+   <h1>About Me</h1>
+  
+   <ul>
+     <li>Nickname: <span id="nickname"></span>
+     <li>Favorites:  <span id="favorites"></span>
+     <li>Hometown: <span id="hometown"></span>
+    </ul>
+  
+  </body>
+
+  <script type="text/javascript">
+
+    var font = document.getElementsByTagName('body')[0];
+    font.style.fontFamily="Arial, san-serif"
+
+    var nick = document.getElementById('nickname');
+    nick.innerHTML = "Pooners";
+    var fav = document.getElementById('favorites');
+    fav.innerHTML = "Tech, Phones, Books, Music, Travel";
+    var town = document.getElementById('hometown');
+    town.innerHTML = "Markham, Ontario";
+
+    var items = document.getElementsByTagName('li');
+      for (var i = 0; i < items.length; i++) {
+        items[i].className = 'listitem';
+      };
+
+    var profile = document.createElement('img');
+    profile.src = "https://scontent-b-iad.xx.fbcdn.net/hphotos-prn1/560043_10151600016386317_646707996_n.jpg";
+    font.appendChild(profile);
+
+  </script>
+
+ </html>
